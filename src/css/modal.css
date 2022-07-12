@@ -1,0 +1,37 @@
+#modal {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal:empty {
+  display: none;
+}
+
+#modal img {
+  aspect-ratio: 3/4;
+}
+
+#modal>div {
+  max-width: 500px;
+  aspect-ratio: 3/4;
+}
+
+#modal button {
+  font-size: 3rem;
+  padding: .5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: white;
+  background-color: transparent;
+  border: none;
+}

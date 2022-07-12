@@ -1,0 +1,51 @@
+.overview-container {
+  max-width: 1200px;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 2rem;
+}
+
+.overview-container[data-theme='dark-mode'] {
+  color: white;
+}
+
+.overview-container[data-theme='light-mode'] {
+  color: black;
+}
+
+.overview-container img {
+  aspect-ratio: 3/5;
+  object-fit: cover;
+}
+
+.poster-container {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.poster {
+  position: relative;
+}
+
+.poster button {
+  position: absolute;
+  inset: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.poster-container .homepage {
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: rgb(35, 35, 134);
+}
+
+.homepage a {
+  display: block;
+  padding: 1rem;
+}

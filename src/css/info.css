@@ -1,0 +1,121 @@
+.info-box {
+  color: inherit;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+.info-box>* {
+  flex-basis: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.light-blue {
+  color: #c2c7dd;
+}
+
+.info-details,
+.info-details ul,
+.info-details li {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.info-details li {
+  gap: .5rem;
+}
+
+.info-title {
+  margin-top: 2rem;
+  font-size: clamp(.5rem, 1rem + 1vw, 2rem)
+}
+
+.info-details li:first-child,
+.info-details li:last-child {
+  display: list-item;
+  margin-left: 1rem;
+}
+
+.user-score-box {
+  margin: 2rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.user-score-box p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.user-score-box span {
+  display: block
+}
+
+.user-score {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  color: white;
+  position: relative;
+  background-color: #081c22;
+  border: 5px solid #204529;
+  box-shadow: 0 0 0 8px #081c22;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.user-score:hover {
+  transform: scale(1.1);
+}
+
+.user-score .percent,
+.user-score svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.user-score .percent {
+  display: flex;
+  align-items: flex-start;
+}
+
+.user-score .percent p {
+  font-size: 1.4rem;
+  font-weight: 900;
+  font-family: cursive;
+  line-height: 1;
+}
+
+.user-score .percent span {
+  font-size: .8rem;
+  font-family: cursive;
+}
+
+.info-box>h3 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.info-box p {
+  font-size: 1.2rem;
+}
+
+.credits {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.credits h3 {
+  font-weight: 700;
+}
+
+.overview-container img {
+  cursor: pointer;
+}
