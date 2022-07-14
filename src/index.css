@@ -152,7 +152,7 @@ header button::before {
 
 input {
   display: block;
-  width: fit-content;
+  width: clamp(20rem, 20rem + 3vw + 1vh, 50rem);
   margin: 2rem auto 0;
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -181,4 +181,14 @@ body[data-theme='light-mode'] {
 .options select {
   padding: .5rem;
   border-radius: 10px;
+}
+
+.logo-button {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }

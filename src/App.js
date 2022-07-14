@@ -6,10 +6,13 @@ import Overview from "./pages/Overview";
 import "./css/filme.css";
 import "./css/info.css";
 import "./css/overview.css";
+import "./css/recomendados.css";
+import './index.css';
 import Logo from './img/Logo.svg';
 import ThemeContext from "./components/ThemeContext";
 
-const LANGUAGES = [ 'pt-br', 'en-us', 'pt', 'uk' ];
+const LANGUAGES = [ 'en-us', 'pt-br', 'pt', 'uk' ];
+
 
 const App = () => {
 
@@ -25,7 +28,7 @@ const App = () => {
 
   useEffect(() => {
     document.body.dataset.theme = theme;
-  });
+  }, [ theme ]);
 
   const changeThemeContext = () => {
     theme === 'dark-mode' ? setTheme('light-mode') : setTheme('dark-mode');
@@ -42,7 +45,6 @@ const App = () => {
               <select name="language" id="language"
                 onChange={(e) => setlanguage(e.target.value)}
                 onBlur={(e) => setlanguage(e.target.value)}>
-                <option />
                 {LANGUAGES.map((language) => (
                   <option key={language} value={language}>
                     {language}
@@ -62,8 +64,10 @@ const App = () => {
             </Routes>
           </main>
           <footer>
-            {/* eslint-disable-next-line */}
-            <img src={Logo} />
+            <button className="logo-button" onClick={() => window.scrollTo(0, 0)}>
+              {/* eslint-disable-next-line */}
+              <img src={Logo} />
+            </button>
           </footer>
         </BrowserRouter>
       </ThemeContext.Provider>

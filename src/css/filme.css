@@ -1,7 +1,8 @@
-.filme-container {
+main>.filme-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
   align-items: stretch;
+  justify-content: center;
   gap: 2rem;
   margin: 2rem min(2%, 2rem);
 }
@@ -10,8 +11,8 @@
   background-color: antiquewhite;
   cursor: pointer;
   border-radius: 0 0 5px 5px;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
+  text-overflow: ellipsis;
 }
 
 .filme-box:hover {
@@ -37,6 +38,14 @@
   gap: 1rem;
 }
 
+.filme-info>h2 {
+  min-width: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
 main>button {
   font-size: 1.5rem;
   padding: .5rem 1rem;
@@ -48,5 +57,4 @@ main>button {
   text-align: center;
   margin: 2rem auto 5rem;
   display: block;
-
 }

@@ -11,25 +11,26 @@ const Overview = ({language}) => {
 
 
   useEffect(() => {
+    async function requestDetails() {
+      const res = await fetch(
+        `https://api.themoviedb.org/3/movie/${props.id}?api_key=2a1a83bf490a5e86d3a9599e93b68d28&language=${language}`
+      );
+      const json = await res.json();
+      setDetails(json);
+    }
+
+    async function requestCredits() {
+      const res = await fetch(
+        `https://api.themoviedb.org/3/movie/${props.id}/credits?api_key=2a1a83bf490a5e86d3a9599e93b68d28&language=${language}`
+      );
+      const json = await res.json();
+      setCredits(json);
+    }
     requestDetails();
     requestCredits();
-  }, [ language ]);
+  }, [ language, props.id ]);
 
-  async function requestDetails() {
-    const res = await fetch(
-      `https://api.themoviedb.org/3/movie/${props.id}?api_key=2a1a83bf490a5e86d3a9599e93b68d28&language=${language}`
-    );
-    const json = await res.json();
-    setDetails(json);
-  }
 
-  async function requestCredits() {
-    const res = await fetch(
-      `https://api.themoviedb.org/3/movie/${props.id}/credits?api_key=2a1a83bf490a5e86d3a9599e93b68d28&language=${language}`
-    );
-    const json = await res.json();
-    setCredits(json);
-  }
   return !details || !credits ? null : (
     <Details details={details} credits={credits} imagesAPI={imagesAPI} />
   );
